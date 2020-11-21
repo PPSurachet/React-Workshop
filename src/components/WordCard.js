@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 import { DeleteOutlined } from '@ant-design/icons'
-import { } from 'antd';
 
 
 const StyleWrapper = styled.div`
     box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
-    margin: 16px;
-    padding: 8px;
+    padding: 16px;
     border-radius: 10px;
 
     .Top{
@@ -29,7 +27,7 @@ const WordCard = (props) => {
                 <div>
                     <b>{props.word}</b><span>{props.types.join(",")}</span>
                 </div>
-                <DeleteOutlined className="delete-icon" />
+                <DeleteOutlined onClick={props.deleteItem} className="delete-icon" />
             </div>
             <div>
                 {props.meanings.join(",")}
